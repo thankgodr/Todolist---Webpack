@@ -45,6 +45,7 @@ describe('Testing add and delete method', () => {
     const task1 = new Todo('testtitel', false, 3);
 
     // Act
+    taskmanager.addTask(task1);
     taskmanager.remveTask(task1);
 
     // Assert
