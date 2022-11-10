@@ -2,7 +2,8 @@ import Todo from '../models/todo';
 
 export default class TaskManager {
   constructor() {
-    const tempArr = JSON.parse(localStorage.getItem('tasksListDb'));
+    const dbObject = localStorage.getItem('tasksListDb');
+    const tempArr = dbObject === undefined ? null : JSON.parse(dbObject);
     if (tempArr == null) {
       this.taskList = [];
     } else {
