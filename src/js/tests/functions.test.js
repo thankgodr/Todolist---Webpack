@@ -74,6 +74,8 @@ describe('Test editTaskDescription, clearAll and changeStatus', () => {
 describe('Testing HTML Dom manipulation', () => {
   // Arange
   localStorage.clear();
+
+  // Mocking HTMl ements
   document.body.innerHTML = '<div class="content">'
         + '<input type="text" placeholder="Add to your list" class="form-control" name="task" id="newTask" />'
         + '<ul id="taskList" class="list-group">' + '</ul>'
@@ -96,6 +98,7 @@ describe('Testing HTML Dom manipulation', () => {
   });
 
   test('Test delete all completed btn clicked', () => {
+    // Act
     document.getElementById('delete_btn').click();
 
     // Assert
